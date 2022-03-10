@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gols</title>
+</head>
+<body>
+    <h1>Brasil x Alemanha</h1>
+    <button onclick="golBrasil()">Gol do Brasil</button>
+    <button onclick="golAlemanha()">Gol da Alemanha</button>
+    <button onclick="limpar()">Recomeçar partida</button>
+    <p><b>Tempo real do jogo:</b></p>
+    <p id="gols"><b></b> </p>
+</body>
+</html>
+<script>
+    function golBrasil() {
+        gols.innerHTML+= '<span style="color: green;">É GOOOOLLLL DO BRASIL!!!!!!!<br></span>';
+    }
+    function golAlemanha() {
+        gols.innerHTML += '<span style="background-color: darkred; color: yellow;">Gol da alemanha. :( <br></span>';
+    }
+    function limpar() {
+        gols.innerHTML = '';
+    }
+</script>

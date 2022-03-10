@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tag input</title>
+</head>
+<body>
+    <h1>Tag input</h1>
+    <!-- INSERÇÃO DE DADOS DO USUÁRIO
+
+        SEMPRE DEIXE INFORMAÇÕES DO QUE ESTÁ ACONTECENDO
+    
+        A MANIPULAÇÃO DOS DADOS INSERIDOS É FEITA ATRAVÉS DO SCRIPT COM:
+        
+        id-input.value
+
+        para colocar aquele textinho na caixinha, utilize o PLACEHOLDER:
+
+        <input type="text" placeholder="DIGITE SEU NOME AQUI">
+
+        substituir um título por placeholder somente quando você tiver espaço limitado.
+
+        Além do PLACEHOLDER, existe o AUTOFOCUS:
+            o AUTOFOCUS faz com que o cursor seja direcionado a ele quando a página for carregada
+
+                por exemplo, CEP errado, ele fica com o campinho em vermelho, e logo o cursos vai automaticamente pra esse campo
+
+        ID, TYPE, PLACEHOLDER
+        
+            SÃO ATRIBUTOS
+
+            BOA PRÁTICA: o ID ser o primeiro atributo definido para ser mais fácil de procurar se der problema
+
+        SEMPRE SERÁ UTILIZADO ID
+
+    -->
+    <button id="fazerCadastro" onclick="mostrar()" style="display: block;">FAÇA SEU CADASTRO AQUI!</button>
+
+    <button id="limparCadastro" onclick="limpar()" style="display: none;">ESCONDER</button>
+
+    <div id="cadastro" style="display: none;">
+
+        <br><input type="email" name="email" id="email" placeholder="Digite aqui o seu e-mail" style="float: left;"><br><br>
+        
+        <input type="password" name="password" id="senha" placeholder="Digite aqui a sua senha"><br><br>
+
+        <button id="trocar" onclick='alterar()'>TROCAR OS DADOS</button><br><br>
+    </div>
+</body>
+</html>
+<script>
+    function alterar() {
+        email.value = 'trocado@gmail.com';
+        senha.value = '12345678';
+    }
+    function mostrar() {
+        cadastro.style.display = 'block';
+        fazerCadastro.style.display = 'none';
+        limparCadastro.style.display = 'block';
+    }
+    function limpar() {
+        //UTILIZAÇÃO DA INTERPOLAÇÃO ``
+        cadastro.style.display = `none`;
+        limparCadastro.style.display = 'none';
+        fazerCadastro.style.display = 'block';
+    }
+</script>

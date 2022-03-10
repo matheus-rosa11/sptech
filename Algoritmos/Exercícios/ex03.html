@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 03</title>
+</head>
+<body>
+    Quantidade de Bananas vendidas <input id="ipt_vendidas" type="text">
+    <button onclick="prata()">Banana Prata</button>
+    <button onclick="nanica()">Banana Nanica</button>
+</body>
+</html>
+<script>
+    function prata() {
+        alert(`Você comprou ${ipt_vendidas.value} unidades de Bananas Prata e o custo total é R$${ipt_vendidas.value * 0.6}`)
+        // Cada unidade de Banana Prata vale R$0,60
+    }
+    function nanica() {
+        alert(`Você comprou ${ipt_vendidas.value} unidades de Bananas Nanica e o custo total é de R$${ipt_vendidas.value * 0.5}`)
+        // Cada unidade de Banana Nanica vale R$0,50
+    }
+</script>

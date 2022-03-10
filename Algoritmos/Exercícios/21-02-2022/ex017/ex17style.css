@@ -1,0 +1,29 @@
+body {
+    background-color: rgb(255, 212, 131);
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+img {
+    align-self: center;
+}
+
+h1 {
+    color: rgb(255, 166, 0);
+    text-shadow: 2.8px 2.8px rgb(53, 53, 53);
+}
+
+button.botao1:hover {
+    background-color: rgb(67, 255, 255);
+    border-color: rgb(90, 207, 168);
+}
+
+button.botao2:hover {
+    background-color: rgb(75, 250, 21);
+    border-color: rgb(122, 235, 94);
+}
+
+button.botao3:hover {
+    background-color: rgb(255, 122, 34);
+    border-color: rgb(207, 93, 0);
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex17MI</title>
+    <link rel="stylesheet" href="ex17style.css">
+</head>
+<body>
+    <h1>O que faz um triatleta?</h1>
+    <button onclick="nadando()">Nada</button>
+    <button onclick="correndo()">Corre</button>
+    <div id="imagem"></div>
+    <br><br>
+
+    <!-- DENTRO DA TAG STYLE, PARAMETRO DISPLAY: NONE É A CAPA DE INVISIBILIDADE
+    
+        DO DISPLAY, UTILIZAREMOS:
+        DISPLAY: NONE; = COLOCO A CAPA | INVISÍVEL | NÃO OCUPA ESPAÇO NENHUM
+        
+        DISPLAY: BLOCK; = TIRA A CAPA  | VISÍVEL (padrão, se você não declarar nada, automaticamente o display é block)
+            FAZ COM QUE O ELEMENTO QUEBRE DE LINHA
+
+
+        --------------------------------------------
+        DA PRA ALTERAR O SOURCE DA TAG IMG NO SCRIPT, permitindo que várias imagens sejam utilizadas apenas em uma tag <img>, trocando apenas seu src="".
+    
+    -->
+    <img id="img_nada" src="https://images.pexels.com/photos/1263348/pexels-photo-1263348.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" style="height: 200px; display: none; align-self: center;">
+    <img id="img_corre" src="https://images.pexels.com/photos/5655114/pexels-photo-5655114.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" style="height: 200px; display: none; align-self: center;">
+</body>
+</html>
+<script>
+    function nadando() {
+        img_corre.style.display = 'none';
+        img_nada.style.display = 'block';
+    }
+    function correndo() {
+        img_nada.style.display = 'none';
+        img_corre.style.display = 'block';
+    }
+</script>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 01</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Cadastro Natalino</h1>
+    <button id="mostrarCd" onclick="mostrarCadastro()">CADASTRE-SE AQUI!</button>
+    <div id="cadastro" style="display: none">
+        
+        <br><input id="cidadeNasc" type="text" placeholder="Insira sua cidade natal"><br><br>
+        <input id="anoNasc" type="text" placeholder="Insira o seu ano de nascimento"><br><br>
+        <button onclick="nascimento()">Cadastrar</button>
+        <button onclick="preencher()">PREENCHER DADOS</button>
+        <button onclick="limparDados()">LIMPAR DADOS</button>
+        <div id="output"></div>
+        <div id="cadastroRealizado"></div>
+        
+    </div>
+</body>
+</html>
+<script>
+    function nascimento() {
+        output.innerHTML = '<br>Você nasceu na cidade ' + '<b>' + cidadeNasc.value+ '</b>' + ' em ' + '<u>' + anoNasc.value + '</u>'
+
+        cadastroRealizado.innerHTML = '<br><div style="width: 100%; background-color: rgb(90, 241, 90); text-align: center">Cadastro realizado com sucesso!</div>'
+        cidadeNasc.value = '';
+        anoNasc.value = '';
+    }
+    function mostrarCadastro() {
+        cadastro.style.display = 'block';
+    }
+    function preencher() {
+        cidadeNasc.value = 'Cidade'
+        anoNasc.value = 'Ano'
+    }
+    function limparDados() {
+        cidadeNasc.value = '';
+        anoNasc.value = '';
+    }
+</script>

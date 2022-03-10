@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triatlo</title>
+    <link rel="stylesheet" href="ex17style.css">
+</head>
+<body>
+    <h1>O que faz um triatleta?</h1>
+    <button class="botao1" onclick="nadando()">Nada</button>
+    <button class="botao2"onclick="correndo()">Corre</button>
+    <button class="botao3"onclick="pedalando()">Pedala</button>
+    <div id="imagem"></div>
+</body>
+</html>
+<script>
+    function nadando() {
+        imagem.innerHTML = '<br><img style="width: 600px" src="https://images.pexels.com/photos/1263348/pexels-photo-1263348.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">';
+    }
+    function correndo() {
+        imagem.innerHTML = '<br><img style="width: 600px" src="https://images.pexels.com/photos/5655114/pexels-photo-5655114.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="">'
+    }
+    function pedalando() {
+        imagem.innerHTML = '<br><img style="width: 600px" src="https://images.pexels.com/photos/5687405/pexels-photo-5687405.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="">'
+    }
+</script>

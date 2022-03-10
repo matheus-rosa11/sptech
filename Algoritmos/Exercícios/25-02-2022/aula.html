@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input</title>
+</head>
+<body>
+    <h1>Tag Input</h1>
+    <div>
+        Entre com o seu nome:
+        <!-- ID, TYPE, PLACEHOLDER
+        
+            SÃO ATRIBUTOS
+
+            BOA PRÁTICA: o ID ser o primeiro atributo definido para ser mais fácil de procurar se der problema
+        -->
+        <input id="iptNome" type="text" placeholder="Entre com o seu nome"><br><br>
+        <button id="bt1" onclick="mostrar()">Mostrar</button>
+    </div>
+</body>
+</html>
+<script>
+    function mostrar() {
+    // CONCATENAÇÃO REALIZADA COM '+'
+        alert('Seu nome é ' + iptNome.value + '. Que nome lindo!');
+    // Neste caso, eu dou o alerta e apago os dados do input depois.
+
+    // PRE-PREENCHIMENTO DE DADOS CADASTRAIS É MUITO ÚTIL (CEP, dados bancários)
+        iptNome.value += '';
+    }
+</script>
