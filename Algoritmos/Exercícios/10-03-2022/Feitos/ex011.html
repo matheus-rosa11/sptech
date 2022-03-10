@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex011 Op. Arit.</title>
+    <style>
+        #corpo {
+            background-color: rgb(140, 255, 255);
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #titulo {
+            color: rgb(10, 100, 100);
+        }
+    </style>
+</head>
+<body id="corpo">
+    <h1 id="titulo"><u>Calcule seu IMC</u></h1>
+    Qual o seu <b><u>peso</u></b>?<br> <input id="ipt_peso" type="text" placeholder="Digite aqui o seu peso"><br><br>
+    Qual a sua <b><u>altura </u></b>?<br> <input id="ipt_altura" type="text" placeholder="Digite aqui a sua altura"><br><br>
+    <button onclick="imc_h()">IMC Homem</button>
+    <button onclick="imc_m()">IMC Mulher</button><br><br>
+    <span id="resultado"></span>
+</body>
+</html>
+<script>
+    function imc_h() {
+        var imc = Number(ipt_peso.value) / Number(ipt_altura.value) ** 2
+        resultado.innerHTML = `Seu IMC é de ${Number(imc.toFixed(1))}`;
+    }
+    function imc_m() {
+        var imc = Number(ipt_peso.value) / Number(ipt_altura.value) ** 2 * 0.9
+        resultado.innerHTML = `Seu IMC é de ${Number(imc.toFixed(1))}`;
+    }
+</script>

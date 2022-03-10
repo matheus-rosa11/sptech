@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 013 Op. Arit.</title>
+</head>
+<body>
+    Salário Bruto <input id="ipt_bruto" type="text"><br><br>
+    <button onclick="descontos()">Calcular Descontos</button><br><br>
+    <span id="resultado" style="color: darkblue;"></span>
+</html>
+<script>
+    function descontos() {
+        var bruto = ipt_bruto.value
+        var inss = bruto * 0.1
+        var ir = bruto * 0.2
+        var sindical = bruto * 0.033
+        var descontado = bruto - inss - ir - sindical
+        resultado.innerHTML = `Apesar do seu bruto ser <b style="color: green;">R$${ipt_bruto.value}</b>, após os descontos, você receberá somente <b style="color: darkred;">R$${Number(descontado)}</b>`;
+    }
+</script>

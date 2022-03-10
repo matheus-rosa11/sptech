@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex07 Op. Arit.</title>
+</head>
+<body>
+    Qual o seu nome? <input id="ipt_nome" type="text" placeholder="Digite aqui o seu nome"><br><br>
+    Avaliação continuada <input id="ipt_continuada" type="text" placeholder="Digite aqui a sua nota da AC"><br><br>
+    Avaliação semestral <input id="ipt_semestral" type="text" placeholder="Digite aqui sua nota semestral"><br><br>
+
+    <button onclick="calcular()">Calcule a sua média!</button><br><br>
+    <span id="resultado"></span>
+</body>
+</html>
+<script>
+    function calcular() {
+        var continuada = Number(ipt_continuada.value * 0.4)
+        var semestral = Number(ipt_semestral.value * 0.6)
+        var media = Number((continuada + semestral))
+        resultado.innerHTML = `${ipt_nome.value}, a sua nota média é ${media}. Não fez mais do que sua obrigação :)`
+    }
+</script>
