@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salário</title>
+</head>
+<body>
+    <h1>Pagamento de Contas</h1>
+    Qual o seu salário? <input id="ipt_salario" type="text" placeholder="Insira aqui o seu salário em R$"><br><br>
+
+    <button onclick="confirmar()">Confirmar Salário</button>
+
+    <button onclick="pagar100()">Pagar conta de R$ 100,00</button>
+    <button onclick="pagar500()">Pagar conta de R$ 500,00</button>
+    <button onclick="ganhar2k()">Ganhar R$ 2.000,00 na loteria!</button><br><br>
+
+    <div id="resultado" style="display: none">
+        Grana atual: R$<span id="opt_resultado"></span>
+    </div>
+</body>
+</html>
+<script>
+    var saldo = 0;
+
+    function confirmar() {
+        resultado.style.display = 'block';
+        saldo = ipt_salario.value;
+        opt_resultado.innerHTML = `${saldo}`;
+    }
+
+    function pagar100() {
+        saldo -= 100;
+        opt_resultado.innerHTML = `${saldo}`;
+    }
+
+    function pagar500() {
+        saldo -= 500;
+        opt_resultado.innerHTML = `${saldo}`;
+    }
+
+    function ganhar2k() {
+        saldo += 2000;
+        opt_resultado.innerHTML = `${saldo}`;
+    }
+</script>
