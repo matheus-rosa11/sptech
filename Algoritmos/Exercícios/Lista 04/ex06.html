@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Qual o seu nome? <input id="ipt_nome_aluno" type="text"><br><br>
+    Quantidade total de aulas no curso <input id="ipt_total_aulas" type="text"><br><br>
+    Quantidade de faltas <input id="ipt_faltas" type="text"><br><br>
+    <button onclick="calcular()">Calcular frequência</button><br><br>
+    <div style="color: blue;" id="resultado"></div><br><br>
+    <div id="vermelho" style="display: none; background-color: darkred; height: 20px;"></div>
+</body>
+</html>
+<script>
+    function calcular() {
+        var aluno = ipt_nome_aluno.value
+        var aulas = ipt_total_aulas.value
+        var faltas = ipt_faltas.value
+
+        vermelho.style.display = "block"
+
+        var frequencia = 100 - (faltas / aulas) * 100
+
+        resultado.innerHTML = `Olá, ${aluno}! Sua frequência foi de <b style="color: green">${frequencia}%</b>`;
+
+        vermelho.style.width = `${frequencia}%`;
+
+    }
+</script>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+</head>
+<body>
+    Insira um número para ver a sua tabuada <input id="ipt_num" type="text">
+    <button onclick="calcular()">Ver tabuada</button>
+
+    <div id="resultado"></div>
+</body>
+</html>
+<script>
+
+    function calcular() {
+        var numero = ipt_num.value
+        resultado.innerHTML =
+        `${numero} x 1 = ${numero * 1}<br>
+        ${numero} x 2 = ${numero * 2}<br>
+        ${numero} x 3 = ${numero * 3}<br>
+        ${numero} x 4 = ${numero * 4}<br>
+        ${numero} x 5 = ${numero * 5}<br>
+        ${numero} x 6 = ${numero * 6}<br>
+        ${numero} x 7 = ${numero * 7}<br>
+        ${numero} x 8 = ${numero * 8}<br>
+        ${numero} x 9 = ${numero * 9}<br>`
+    }
+</script>

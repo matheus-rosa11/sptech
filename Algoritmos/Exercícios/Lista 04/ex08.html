@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filhos</title>
+</head>
+<body>
+    Quantos filhos de até 10 anos você tem? <input id="ipt_filhos_menores" type="text"><br><br>
+    Quantos filhos a partir de 10 anos você tem? <input id="ipt_filhos_maiores" type="text"><br><br>
+    <button onclick="calcular()">Calcular Auxílio Filhos</button><br><br>
+    <div id="auxilio_filhos"></div>
+</body>
+</html>
+<script>
+    function calcular() {
+        var menor = ipt_filhos_menores.value
+        var maior = ipt_filhos_maiores.value
+        var valor_auxilio_menor = 30 * menor
+        var valor_auxilio_maior = 20 * maior
+        var auxilio_total = valor_auxilio_maior + valor_auxilio_menor
+        auxilio_filhos.innerHTML = `Você tem <b>${menor}</b> filhos menores e ${maior} filhos a partir de 10 anos, logo, seu "Auxílio Filhos" será de <b>R$ ${auxilio_total.toFixed(2)}</b>`;
+    }
+</script>

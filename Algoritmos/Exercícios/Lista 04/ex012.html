@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Saiyajin</title>
+</head>
+<body>
+    <img src="goku.png" alt=""><br>
+    Ki Base <input id="ipt_ki" type="text"><br><br>
+    <b>Transformar em...</b><br>
+    <button onclick="ssj()">SSJ</button>
+    <button onclick="ssj2()">SSJ2</button>
+    <button onclick="ssj3()">SSJ3</button><br><br>
+    <span id="opt_ki"></span>
+</body>
+</html>
+<script>
+    var ki = 0
+    function ssj() {
+        ki = ipt_ki.value * 50
+        opt_ki.innerHTML = `Após se transformar em SSJ, o ki desse Saiyajin passa a ser de <b>${ki}</b><br><img src="ssj.png" alt=""><br>`;
+    }
+    
+    function ssj2() {
+        ki = ipt_ki.value * 100
+        opt_ki.innerHTML = `Após se transformar em SSJ, o ki desse Saiyajin passa a ser de <b>${ki}</b><br><img src="ssj2.png" alt=""><br>`;
+    }
+    
+    function ssj3() {
+        ki = ipt_ki.value * 200
+        opt_ki.innerHTML = `Após se transformar em SSJ, o ki desse Saiyajin passa a ser de <b>${ki}</b><br><img src="ssj3.png" alt=""><br>`;
+    }
+</script>
