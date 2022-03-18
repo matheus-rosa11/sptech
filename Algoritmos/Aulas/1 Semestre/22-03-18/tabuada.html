@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>TABUADA</h1>
+    Selecione um número para ver a sua tabuada <select id="ipt_tabuada" onmouseover="teste()" onmouseleave="tirar()" onchange="calcular()">
+        <option value="">Selecione o número</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+    </select><br><br>
+
+    <div id="resultado"></div>
+
+    <div id="resultado2"></div>
+</body>
+</html>
+<script>
+    function calcular() {
+        var tabuada = ipt_tabuada.value
+        resultado.innerHTML =
+        `${tabuada} x 2 = <b>${tabuada * 2}</b><br>
+        ${tabuada} x 3 = <b>${tabuada * 3}</b><br>
+        ${tabuada} x 4 = <b>${tabuada * 4}</b><br>
+        ${tabuada} x 5 = <b>${tabuada * 5}</b><br>
+        ${tabuada} x 6 = <b>${tabuada * 6}</b><br>
+        ${tabuada} x 7 = <b>${tabuada * 7}</b><br>
+        ${tabuada} x 8 = <b>${tabuada * 8}</b><br>
+        ${tabuada} x 9 = <b>${tabuada * 9}</b><br><br>
+        <b><u><i>FRIZZAAAAAAAAAAAAAAAAA</i></u></b>`;  
+    }
+
+    function teste() {
+        resultado2.innerHTML = "<i>FRIZZA, POR QUE VOCE MATOU O KURIRIN???</i>"
+    }
+
+    function tirar() {
+        resultado2.innerHTML = "";
+    }
+</script>
