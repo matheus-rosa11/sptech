@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>X1 LENDÁRIO</h1>
+    <button onclick="mcpoze()"><img src="hqdefault.jpg" alt="MC Poze" style="height: 150px;"></button> Votos: <span id="opt_poze">0</span><br><br>
+    <button onclick="robertocarlos()"><img src="roberto-carlos-970x550.jpg" alt="Roberto Carlos" style="height: 150px;"></button> Votos: <span id="opt_robertocarlos">0</span><br><br>
+    Total de votos: <span id="opt_total">0</span>
+</body>
+</html>
+<script>
+    var votos_poze = 0;
+    var votos_robertocarlos = 0;
+    var total = 0
+
+    function mcpoze() {
+        votos_poze ++;
+        total ++;
+        opt_poze.innerHTML = `${votos_poze}`;
+        opt_total.innerHTML = `${total}`;
+    }
+
+    function robertocarlos() {
+        votos_robertocarlos ++;
+        total ++;
+        opt_robertocarlos.innerHTML = `${votos_robertocarlos}`;
+        opt_total.innerHTML = `${total}`;
+    }
+
+   
+</script>
