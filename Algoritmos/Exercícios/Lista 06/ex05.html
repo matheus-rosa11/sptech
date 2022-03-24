@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paulopolis</title>
+</head>
+<body>
+    <h1>Gasto de Energia</h1>
+    Quantidade de kWh consumida por dia <input id="ipt_kwh" type="text">
+    <button onclick="calcular()">Calcular conta de luz</button><br><br>
+    <div id="resultado"></div>
+</body>
+</html>
+<script>
+    function calcular() {
+        var valor = 0.85 * Number(ipt_kwh.value)
+        var conta = valor * 30
+
+        if (conta < 100) {
+            conta *= 0.9
+        }
+
+        alert(`Você precisa pagar R$ ${conta.toFixed(2)}`)
+    }
+</script>

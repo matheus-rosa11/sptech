@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notas</title>
+</head>
+<body>
+    <h1>Calcule sua média</h1>
+    Insira 3 notas <br><br>
+    <input id="ipt_nota1" type="text"><br><br>
+    <input id="ipt_nota2" type="text"><br><br>
+    <input id="ipt_nota3" type="text"><br><br>
+    <button onclick="calcular()">Analisar desempenho</button><br><br>
+    <div id="resultado"></div>
+</body>
+</html>
+<script>
+    function calcular() {
+        var n1 = Number(ipt_nota1.value);
+        var n2 = Number(ipt_nota2.value);
+        var n3 = Number(ipt_nota3.value);
+        var media = (n1 + n2 + n3) / 3
+
+        resultado.innerHTML = `Sua média foi de ${media.toFixed(2)}. `;
+
+        if (media >= 9.4) {
+            resultado.innerHTML += `Parabéns, você é fora de série!`;
+        } else {
+            resultado.innerHTML += `Infelizmente, você foi reprovado.`;
+        }
+
+    }
+</script>

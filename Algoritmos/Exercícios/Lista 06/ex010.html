@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Streming</title>
+</head>
+<body>
+    <h1>Séries SITCOM</h1>
+    Qual foi a última série que você assistiu? <input id="ipt_serie" type="text" placeholder="Ex.: How I Met Your Mother"><br><br>
+
+    Quantos episódios você já assistiu no total? <input id="ipt_eps" type="text" placeholder="Ex.: 27"><br><br>
+
+    <button onclick="verificar()">Verificar nível</button><br><br>
+    <div id="resultado"></div>
+</body>
+</html>
+<script>
+    function verificar() {
+        var serie = ipt_eps.value
+        var minutos = Number(ipt_eps.value) * 22;
+
+        resultado.innerHTML = `Vejo que você gosta da série ${serie} `;
+
+        if (minutos > 660) {
+            resultado.innerHTML += `Uau, você realmente gosta dessa série!`;
+        }
+    }
+</script>

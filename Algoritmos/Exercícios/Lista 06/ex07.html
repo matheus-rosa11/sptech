@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banco Itado</title>
+</head>
+<body>
+    <h1>Cheque Especial</h1>
+    Saldo da conta <input id="ipt_saldo"  type="text"placeholder="Ex.: R$ 60000.00"><br><br>
+    Valor do débito <input id="ipt_debito" type="text" placeholder="Valor a tirar da conta"><br><br>
+    <button onclick="calcular()">Analisar conta</button><br><br>
+    <div id="resultado"></div>
+</body>
+</html>
+<script>
+    function calcular() {
+        var saldo = Number(ipt_saldo.value);
+        var debito = Number(ipt_debito.value);
+        var novo_saldo = saldo - debito
+
+        if (novo_saldo < 0) {
+            resultado.innerHTML = `<b style="color: red">O saldo atual da conta corrente é de R$ ${novo_saldo.toFixed(2)}</b>`;
+        } else {
+            resultado.innerHTML = `O saldo atual da conta corrente é de R$ ${novo_saldo.toFixed(2)}`;
+        }
+    }
+</script>
