@@ -9,7 +9,9 @@
 <body>
     <h1>Qual o peso no elevador?</h1>
     Quantos homens entraram no elevador? <input type="text" id="ipt_homem"><br><br>
+
     Quantas mulheres entraram no elevador? <input type="text" id="ipt_mulher"><br><br>
+    
     <button onclick="calcular()">Analisar peso</button><br><br>
     <div id="resultado"></div>
 </body>
@@ -20,7 +22,7 @@
 
         resultado.innerHTML = `Este eleador suporta 800Kg e o peso estimado desta lotação é de ${peso}Kg. `;
 
-        if (peso > 800) {
+        if (peso > 800 & peso < 1000) {
             resultado.innerHTML += `<span style="color: blue;">Será necessário descer alguém para que o elevador se movimente.</span>`;
         }
     }
