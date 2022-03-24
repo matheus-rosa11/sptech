@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza</title>
+</head>
+<body style="text-align: center;">
+    <h1>Pizzaria do Robervaldo</h1>
+    Sabor da Pizza <select id="ipt_sabor" autofocus>
+        <option value=23>Muçarela</option>
+        <option value=24>Calabresa</option>
+        <option value=26>Atum</option>
+        <option value=30>Portuguesa</option>
+    </select><br><br>
+
+    Incrementos da Pizza <br><br> <select id="ipt_add1">
+        <option value=2>Queijo</option>
+        <option value=2.5>Presunto</option>
+        <option value=1.5>Ovo</option>
+        <option value=4>Palmito</option>
+        <option value=3.5>Frango</option>
+        <option value=3>Catupiry</option>
+    </select><br><br>
+    <select id="ipt_add2">
+        <option value=2>Queijo</option>
+        <option value=2.5>Presunto</option>
+        <option value=1.5>Ovo</option>
+        <option value=4>Palmito</option>
+        <option value=3.5>Frango</option>
+        <option value=3>Catupiry</option>
+    </select><br><br>
+    <select id="ipt_add3">
+        <option value=2>Queijo</option>
+        <option value=2.5>Presunto</option>
+        <option value=1.5>Ovo</option>
+        <option value=4>Palmito</option>
+        <option value=3.5>Frango</option>
+        <option value=3>Catupiry</option>
+    </select><br><br>
+   
+    <button onclick="confirmar()">Confirmar Compra</button>
+
+    <div id="resultado"></div>
+</body>
+</html>
+<script>
+
+    var sabor = 0;
+    var add1 = 0;
+    var add2 = 0;
+    var add3 = 0;
+    function confirmar() {
+        sabor = Number(ipt_sabor.value);
+        add1 = Number(ipt_add1.value);
+        add2 = Number(ipt_add2.value);
+        add3 = Number(ipt_add3.value);
+
+        var total = sabor + add1 + add2 + add3
+
+        resultado.innerHTML = `A pizza custava R$${sabor}, mas foi acrescido R$${add1}, R$${add2} e R$${add3}, e passará a custar um total de <u style="color: red;">R$${total}</u>`;
+    }
+</script>

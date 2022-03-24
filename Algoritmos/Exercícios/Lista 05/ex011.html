@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cofrinho</title>
+</head>
+<body>
+    <h1>Cofrinho</h1>
+    <select name="" id="ipt_moeda">
+        <option value="5">1 Dólar</option>
+        <option value="6">1 Euro</option>
+        <option value="7">1 Libra</option>
+    </select><br><br>
+
+    <button onclick="depositar()">DEPOSITAR</button>
+    <button onclick="gastar()">Gastar a Grana</button><br><br>
+
+    O saldo do cofrinho é de: <span id="opt_saldo"></span><br>
+    A quantidade de operações foi: <span id="opt_operacoes"></span><br>
+    Média dos depósitos: <span id="opt_media"></span><br>
+
+</body>
+</html>
+<script>
+    var saldo = 0;
+    var operacoes = 0;
+    var media = 0;
+
+    function depositar() {
+        operacoes++;
+        saldo += Number(ipt_moeda.value);
+        media = saldo / operacoes
+        opt_saldo.innerHTML = `R$ <b>${saldo}</b>`;
+        opt_operacoes.innerHTML = `<b>${operacoes}</b>`;
+        opt_media.innerHTML = `R$ <b>${media}</b>`;
+    }
+
+    function gastar() {
+        operacoes = 0;
+        saldo = 0;
+        media = 0
+        opt_saldo.innerHTML = `R$ <b>${saldo}</b>`;
+        opt_operacoes.innerHTML = `<b>${operacoes}</b>`;
+        opt_media.innerHTML = `R$ <b>${media}</b>`;
+    }
+</script>

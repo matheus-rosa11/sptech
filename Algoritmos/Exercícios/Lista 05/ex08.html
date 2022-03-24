@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atendimento</title>
+</head>
+<body>
+    <h1>Serviço de Atendimento</h1>
+    <h3>Como está meu atendimento?</h3>
+    <select name="" id="ipt_avaliacao">
+        <option value="1">1 estrela</option>
+        <option value="2">2 estrelas</option>
+        <option value="3">3 estrelas</option>
+        <option value="4">4 estrelas</option>
+        <option value="5">5 estrelas</option>
+    </select>
+
+    <button onclick="confirmar()">Confirmar</button><br><br>
+
+    Média atual: <span id="opt_media"></span> estrelas
+    Número de avaliações: <span id="opt_avaliacoes"></span>
+
+</body>
+</html>
+<script>
+
+    var avaliacoes = 0; 
+    var media = 0;
+    var estrelas = 0;
+
+    function confirmar() {
+        avaliacoes ++;
+        estrelas += Number(ipt_avaliacao.value)
+        media = estrelas / avaliacoes
+        opt_media.innerHTML = `${media.toFixed(2)}`;
+        opt_avaliacoes.innerHTML = `${avaliacoes}`;
+    }
+</script>
