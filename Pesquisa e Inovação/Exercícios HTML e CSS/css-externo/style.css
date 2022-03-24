@@ -1,0 +1,30 @@
+#div-a {
+    background-color: #ff5cff;
+    height: 500px;
+    width: 500px;
+}
+
+#div-b {
+    background-color: #c94ae9;
+    height: 250px;
+    width: 250px;
+}
+
+#div-d {
+    width: 50%;
+    height: 50vh;
+    background-color: rgb(176, 29, 212);
+}
+
+#div-e {
+    width: 75vw;
+    height: 25vh;
+    background-color: rgb(168, 0, 190);
+}
+
+#div-paragrafo {
+    color: rgb(47, 206, 246);
+    background-color: rgb(111, 4, 160);
+    font-size: 25px;
+    font-family: monospace;
+}
