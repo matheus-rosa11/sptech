@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="conversor.js"></script>
+</head>
+
+<body>
+    <div id="box">
+        <h1>Conversor de Bases</h1>
+        Digite um número decimal: <br><br>
+        <input id="ipt_num" type="text" placeholder="Digite seu número aqui" autofocus><br><br>
+        
+        <button onclick="main()">Converter</button><br><br>
+        <div id="container" style="display: none;">
+            <div id="div_binario">
+                Binário <br> <span id="result_binario"></span>
+            </div>
+            <div id="div_octal">
+                Octal <br> <span id="result_octal"></span>
+            </div>
+            <div id="div_hexa">
+                Hexadecimal <br> <span id="result_hexa"></span>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
