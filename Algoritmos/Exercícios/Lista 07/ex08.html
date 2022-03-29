@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elevador</title>
+</head>
+<body>
+    <h1>Será que vai?</h1>
+    Quantos homens tem no elevador? <input id="ipt_homens" type="text" placeholder="Ex.: 6"><br><br>
+    Quantas mulheres tem no elevador? <input id="ipt_mulheres" type="text" placeholder="Ex.: 7"><br><br>
+    <button onclick="calcular()">Ligar elevador</button><br><br>
+    <div id="resultado"></div>
+    
+</body>
+</html>
+<script>
+    function calcular() {
+        var peso_homem = ipt_homens.value;
+        var peso_mulher = ipt_mulheres.value;
+        var total = peso_homem * 90 + peso_mulher * 70
+
+        if (total < 500) {
+            resultado.innerHTML = `<span style="color: green;">O elevador irá se mover, pois está com ${total}Kg.</span>`
+        } else if (total >= 500) {
+            resultado.innerHTML = `<span style="color: red;">Alguém precisa descer. O elevador precisa perder ${total - 500}Kg para se mover</span>`
+        }
+    }
+</script>

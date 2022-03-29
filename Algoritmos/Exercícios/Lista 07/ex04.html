@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frequência</title>
+</head>
+<body>
+    <h1>Frequência do Aluno</h1>
+    Frequência do aluno: <input id="ipt_freq" type="text" placeholder="Ex.: 75">
+    <button onclick="calcular()">Analisar frequência</button><br><br>
+    <div><img style="height: 200px;" id="opt_imagem" src="" alt="">
+    </div>
+</body>
+</html>
+<script>
+    function calcular() {
+        var frequencia = ipt_freq.value;
+
+        if (frequencia < 50) {
+            opt_imagem.src = "https://cdn.panrotas.com.br/portal-panrotas-statics/media-files-cache/208118/b50170eaeee108df86cfda58d9c4d1fdphotographer4070681920/0,89,1280,764/670,400,0.35/0/default.jpg";
+        } else if (frequencia >= 50) {
+            opt_imagem.src = "https://img.freepik.com/fotos-gratis/alunos-na-licao_1098-15893.jpg?size=626&ext=jpg";
+        }
+    }
+</script>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avaliação</title>
+</head>
+<body>
+    <h1>Calcule a sua nota!</h1>
+    Insira sua primeira nota <input id="ipt_nota1" type="text"><br><br>
+    Insira sua segunda nota <input id="ipt_nota2" type="text"><br><br>
+    <button onclick="calcular()">Verificar situação</button>
+</body>
+</html>
+<script>
+    function calcular() {
+        var n1 = Number(ipt_nota1.value);
+        var n2 = Number(ipt_nota2.value);
+        var media = (n1 + n2) / 2
+
+        if (media >= 6) {
+            alert(`Parabéns, sua média foi ${media.toFixed(2)} aluno aprovado!`)
+        } else if (media < 6) {
+            alert(`Sua média foi ${media.toFixed(2)}. Aluno reprovado.`)
+        }
+    }
+</script>

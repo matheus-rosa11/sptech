@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Família</title>
+</head>
+<body>
+    <h1>Analisar família</h1>
+    Quantos filhos você tem? <input id="ipt_filhos" type="text">
+    <button onclick="calcular()">Analisar família</button><br><br>
+    <div id="resultado">
+        <span id="resultado_1"></span><br><br>
+        <span id="resultado_2"></span><br><br>
+        <span id="resultado_3"></span><br><br>
+        <span id="resultado_4"></span><br><br>
+    </div>
+</body>
+</html>
+<script>
+    function calcular() {
+
+        resultado_1.innerHTML = ``;
+        resultado_2.innerHTML = ``;
+        resultado_3.innerHTML = ``;
+        resultado_4.innerHTML = ``;
+
+        var filhos = Number(ipt_filhos.value)
+
+        if (filhos >= 1) {
+            resultado_1.innerHTML = `Não tem TV.`;
+
+        } else if (filhos >= 2) {
+            resultado_2.innerHTML = `Não tem internet.`;
+
+        } else if (filhos >= 3) {
+            resultado_3.innerHTML = `Não tem video game`;
+
+        } else if (filhos >= 4) {
+            resultado_4.innerHTML = `Não tem Netflix`;
+        }
+    }
+</script>

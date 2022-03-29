@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercado Bom Doce</title>
+</head>
+<body>
+    <h1>Chocolates</h1>
+    Quantos chocolates foram comprados? <input id="ipt_qtd" type="text" placeholder="Ex.: 30">
+    <button onclick="calcular()">Compra</button><br><br>
+    <div id="opt_resultado"></div>
+</body>
+</html>
+<script>
+    function calcular () {
+        var chocolates = ipt_qtd.value;
+        var valor = 0;
+
+        if (chocolates >= 12) {
+            valor = chocolates * 2.5;
+        } else {
+            valor = chocolates * 3;
+        }
+
+        opt_resultado.innerHTML = `O valor da sua compra foi de ${valor.toFixed(2)}`;
+    }
+</script>

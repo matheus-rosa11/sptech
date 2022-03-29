@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio</title>
+    <script src="desafio.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Fazendinha Feliz</h1>
+    <!-- select principal -->
+    <div id="container">
+            <select id="ipt_tipo" onchange="main()" id="">
+                <option value="">-- Selecione uma opção --</option>
+                <option value="oviparo">Ovíparos</option>
+                <option value="mamifero">Mamíferos</option>
+            </select><br><br>
+            <!-- sub-options -->
+        <div id="content">
+            <select id="ipt_oviparo" onchange="func_oviparo()" style="display: none;">
+                <option value="">Selecione seu ovíparo</option>
+                <option value="galinha">Galinha</option>
+                <option value="peixe">Peixe</option>
+                <option value="tartaruga">Tartaruga</option>
+            </select>
+            <select id="ipt_mamifero" onchange="func_mamifero()" style="display: none;">
+                <option value="">Selecione seu mamífero</option>
+                <option value="elefante">Elefante</option>
+                <option value="porco">Porco</option>
+                <option value="coelho">Coelho</option>
+            </select><br>
+        </div>
+            <!-- output imagem -->
+        <div id="div_img" style="display: none">
+            <img id="opt_imagem" src="" alt="" style="height: 200px;">
+        </div>
+
+        <div id="div_compra" style="display: none">
+            <strong>Valor de compra do animal</strong> <input id="ipt_valor" type="text" placeholder="Ex.: 5000"><br><br>
+            <button onclick="calcular()">Calcular imposto</button><br><br>
+            <div id="resultado" style="display: none"></div>
+        </div>
+        
+    </div>
+</body>
+</html>

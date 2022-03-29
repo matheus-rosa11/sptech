@@ -16,14 +16,14 @@
 </html>
 <script>
     function calcular() {
-        var saldo = Number(ipt_saldo.value)
-        var debito = Number(ipt_debito.value)
-        var novo_saldo = saldo - debito
+        var saldo = Number(ipt_saldo.value);
+        var debito = Number(ipt_debito.value);
+        var novo_saldo = saldo - debito;
 
         if (novo_saldo < 0) {
-            resultado.innerHTML = `<b style="color: red">O saldo atual da conta corrente é R$ ${novo_saldo.toFixed(2)}</b>`
+            resultado.innerHTML = `<b style="color: red">O saldo atual da conta corrente é R$ ${novo_saldo.toFixed(2)}</b>`;
         } else if (novo_saldo >= 0) {
-            resultado.innerHTML = `<i style="color: blue">O saldo atual da conta corrente é R$ ${novo_saldo.toFixed(2)}</i>`
+            resultado.innerHTML = `<i style="color: blue">O saldo atual da conta corrente é R$ ${novo_saldo.toFixed(2)}</i>`;
         }
 
         

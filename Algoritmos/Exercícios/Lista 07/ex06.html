@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de temperatura</title>
+</head>
+<body>
+    <h1>Controle de temperatura</h1>
+    Qual a temperatura atual do ambiente? <input id="ipt_temperatura" type="text">
+    <button onclick="calcular()">Verificar clima</button><br><br>
+    <div>
+        <div id="opt_resultado"></div>
+        <div><img id="opt_imagem"  style="height: 200px;" src="" alt=""></div>
+    </div>
+</body>
+</html>
+<script>
+   function calcular() {
+       var clima = ipt_temperatura.value;
+
+       if (clima < 10) {
+           opt_resultado.innerHTML = `Apropriada para conservar alimento.`;
+           opt_imagem.src = "https://i1.wp.com/www.felizmelhoridade.com.br/wp-content/uploads/2018/04/Ma%C3%A7%C3%A3-%E2%80%93-Formas-de-comer-e-indica%C3%A7%C3%B5es.jpg?fit=1024%2C978&ssl=1";
+
+       } else if (clima >= 10) {
+           opt_resultado.innerHTML = `Inapropriada para conservar alimento.`;
+           opt_imagem.src = "https://thumbs.dreamstime.com/b/ma%C3%A7%C3%A3-podre-12140617.jpg";
+       }
+   } 
+</script>
