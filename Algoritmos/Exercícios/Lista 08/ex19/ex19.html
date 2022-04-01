@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,25 +11,25 @@
     
     <div class="container">
         <img id="logo" src="Mortal_kombat_logo-removebg-preview.png">
-        <h1>Mortal Kombat</h1>
+        <h1>MORTAL KOMBAT</h1>
         <div class="cover">
             <div class="batalha">
                 <div id="personagem1">
                     <img id="scorpion" class="boneco" src="scorpion.png" >
                     <div id="hp1"></div>
                     <button onclick="apanhar1()">APANHAR</button>
+                    <p id="winner1" class="winner">WINNER</p>
+                    <p id="loser1" class="loser">LOSER</p>
                 </div>
                 <div id="personagem2">
-                    <img id="subzero" class="boneco" src="subzero
-                    .png">
+                    <img id="subzero" class="boneco" src="subzero.png">
                     <div id="hp2"></div>
                     <button onclick="apanhar2()">APANHAR</button>
+                    <p id="winner2" class="winner">WINNER</p>
+                    <p id="loser2" class="loser">LOSER</p>
             </div>
         </div class="cover">
-    </div>
-
-    <div>
-
+        <button id="btn_restart" onclick="restart()">REINICIAR</button>
     </div>
 </body>
 </html>
@@ -39,12 +39,45 @@
     var vida2 = 300;
 
     function apanhar1() {
+
         vida1 -= 25
         hp1.style.width = `${vida1}px`;
+        
+        if (vida1 == 0) {
+            loser1.style.display = 'block';
+            winner2.style.display = 'block';
+            btn_restart.style.display = 'block';
+            scorpion.src = 'subzerowins.png';
+        }
     }
 
     function apanhar2() {
         vida2 -= 25
         hp2.style.width = `${vida2}px`
+
+        if (vida2 == 0) {
+            loser2.style.display = 'block';
+            winner1.style.display = 'block';
+            btn_restart.style.display = 'block';
+            subzero.src = 'scorpionwins.png';
+        }
+    }
+
+    function restart() {
+
+        vida1 = 300;
+        vida2 = 300;
+
+        scorpion.src = 'scorpion.png';
+        subzero.src = 'subzero.png';
+
+        hp1.style.width = vida1 + 'px';
+        hp2.style.width = vida2 + 'px';
+
+        winner1.style.display = 'none';
+        winner2.style.display = 'none';
+        loser1.style.display = 'none';
+        loser2.style.display = 'none';
+        btn_restart.style.display = 'none';
     }
 </script>
