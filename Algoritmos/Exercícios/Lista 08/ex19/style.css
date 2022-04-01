@@ -1,0 +1,62 @@
+body {
+    margin: 0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url(mortal-kombat-hbo-max.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
+}
+
+.cover {
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 1349px;
+    height: 500px;
+}
+
+#logo {
+    width: 150px;
+    margin: 0px 44% 0px;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+    margin-top: 0;
+}
+
+.boneco {
+    width: 300px;
+}
+
+#hp1 {
+    width: 300px;
+    height: 10px;
+    background-color: blue;
+}
+
+#hp2 {
+    width: 300px;
+    height: 10px;
+    background-color: red;
+}
+
+.batalha {
+    margin-left: 300px;
+    margin-right: 300px
+}
+
+#personagem1 {
+    float: left;
+}
+
+#personagem2 {
+    float: right;
+}
+
+#subzero {
+    margin-top: 23px;
+    height: 300px;
+    width: 300px;
+}

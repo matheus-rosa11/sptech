@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educação Física</title>
+</head>
+<body>
+    <h1>Seja um atleta</h1>
+    Qual a sua altura? (Em cm) <input id="ipt_altura" type="text" placeholder="Ex. 165">
+    <button onclick="mostrar()">Seja um atleta!</button><br><br>
+
+    <div id="resultado"></div>
+</body>
+</html>
+<script>
+    function mostrar() {
+
+        var altura = ipt_altura.value;
+
+        if (altura <= 165) {
+            resultado.innerHTML = 'Você pode ser piloto de corrida!';
+        } else if (altura > 165 & altura <= 180) {
+            resultado.innerHTML = 'Você pode ser jogador de futebol!';
+        } else if (altura > 180) {
+            resultado.innerHTML = 'Você pode ser jogador de vôlei ou basquete';
+        } else {
+            resultado.innerHTML = 'Altura inválida. Tente novamente, por favor.'
+        }
+    }
+</script>

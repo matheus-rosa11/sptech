@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mortal Kombat</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="container">
+        <img id="logo" src="Mortal_kombat_logo-removebg-preview.png">
+        <h1>Mortal Kombat</h1>
+        <div class="cover">
+            <div class="batalha">
+                <div id="personagem1">
+                    <img id="scorpion" class="boneco" src="scorpion.png" >
+                    <div id="hp1"></div>
+                    <button onclick="apanhar1()">APANHAR</button>
+                </div>
+                <div id="personagem2">
+                    <img id="subzero" class="boneco" src="subzero
+                    .png">
+                    <div id="hp2"></div>
+                    <button onclick="apanhar2()">APANHAR</button>
+            </div>
+        </div class="cover">
+    </div>
+
+    <div>
+
+    </div>
+</body>
+</html>
+<script>
+
+    var vida1 = 300;
+    var vida2 = 300;
+
+    function apanhar1() {
+        vida1 -= 25
+        hp1.style.width = `${vida1}px`;
+    }
+
+    function apanhar2() {
+        vida2 -= 25
+        hp2.style.width = `${vida2}px`
+    }
+</script>
