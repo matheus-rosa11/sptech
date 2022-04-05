@@ -1,7 +1,7 @@
 create database Pet;
 use Pet;
 
-create table Dono (
+create table Dono(
     idDono int primary key auto_increment,
     nomeDono varchar(45),
     sobrenome varchar(45)
@@ -13,7 +13,7 @@ insert into Dono(nomeDono, telFixo, telCel) values
     ('Yura', '(11)3456-3565', '(11)93241-1243'),
     ('Blake', '(22)3485-1111', '(11)95349-0051');
 
-create table Contato (
+create table Contato(
     idContato int primary key auto_increment,
     telFixo varchar(13),
     telCel varchar(14),
@@ -27,7 +27,7 @@ insert into Contato(telFixo, telCel, fkDono) values
     ('(11)3456-3565', '(11)93241-1243', 3),
     ('(22)3485-1111', '(11)95349-0051', 4);
 
-create table Logradouro (
+create table Logradouro(
     idLogradouro int primary key auto_increment,
     estado char(2),
     cidade varchar(50),

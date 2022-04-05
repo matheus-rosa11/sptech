@@ -1,7 +1,7 @@
 create database Gastos;
 use Gastos;
 
-create table Pessoa (
+create table Pessoa(
     idPessoa int primary key auto_increment,
     nome varchar(45),
     dtNasc date,
@@ -15,7 +15,7 @@ insert into pessoa(nome, dtNasc, profissao) values
     ('Denver', '1992-03-20', 'Cinema'),
     ('Fernanda', '2003-07-02', 'Psicologia')
 
-create table Gastos (
+create table Gastos(
     idGasto int primary key auto_increment,
     dtGasto date,
     valor decimal(10.2),
@@ -55,3 +55,6 @@ update gastos set valor = 120.00 where idGasto = 2;
 update gastos set valor = 150.00 where idGasto = 3;
 update gastos set valor = 200.00 where idGasto = 4;
 update gastos set valor = 500.00 where idGasto = 5;
+
+-- Exclua um ou mais registros de alguma tabela
+delete from Gastos where idGasto = 3;
