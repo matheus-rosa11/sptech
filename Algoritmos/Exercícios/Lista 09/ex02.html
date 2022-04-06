@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex02</title>
+</head>
+<body>
+    Qual a sua renda? <input type="text" id="ipt_user">
+    Qual a sua renda familiar? <input type="text" id="ipt_familia">
+    <button onclick="ajudar()">Verificar ajuda</button>
+</body>
+</html>
+<script>
+    function ajudar() {
+        var user = Number(ipt_user.value)
+        var fml = Number(ipt_familia.value)
+
+        if (user <= 1050 && fml <= 2100) {
+            alert('Você terá direito!')
+        } else {
+            alert('Você NÃO terá direito')
+        }
+    }
+</script>

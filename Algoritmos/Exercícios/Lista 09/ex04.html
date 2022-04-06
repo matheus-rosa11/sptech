@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex04</title>
+</head>
+<body>
+    <h1>Vegano?</h1>
+    <select name="" id="ipt_cafe">
+        <option value="ovos">Ovos</option>
+        <option value="leite-arroz">Leite de arroz</option>
+        <option value="bacon">Bacon</option>
+    </select>
+    <select name="" id="ipt_almoco">
+        <option value="bife">Bife</option>
+        <option value="hamburguer-soja">Hambúrguer de soja</option>
+        <option value="frango-grelhado">Frango grelhado</option>
+    </select>
+    <select name="" id="ipt_janta">
+        <option value="picanha-soja">Picanha de soja</option>
+        <option value="cupim">Cupim</option>
+        <option value="coracao">Coração</option>
+    </select>
+    <button onclick="verify_veg()">Sou vegano?</button>
+    <div id="resultado"></div>
+</body>
+</html>
+<script>
+    function verify_veg() {
+        var cafe = ipt_cafe.value;
+        var almoco = ipt_almoco.value;
+        var janta = ipt_janta.value;
+
+        if (cafe == 'leite-arroz' && almoco == 'hamburguer-soja' && janta == 'picanha-soja') {
+            resultado.innerHTML = 'Sim, você é vegano!';
+        } else {
+            resultado.innerHTML = 'Não, você não é vegano';
+        }
+    }
+</script>
