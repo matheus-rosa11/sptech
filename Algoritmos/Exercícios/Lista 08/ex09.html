@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex09</title>
+</head>
+<body>
+    <p>Qual a sua meta de economia?</p>
+    <input id="ipt_economia" type="text">
+    <p>Quanto você tem guardado?</p>
+    <input id="ipt_saldo" type="text">
+    <button onclick="calcular()">Analisar economia</button><br><br>
+    <div id="resultado"></div>
+</body>
+</html>
+<script>
+    function calcular() {
+        var meta = Number(ipt_economia.value);
+        var saldo = Number(ipt_saldo.value);
+
+        if (saldo == meta) {
+            resultado.innerHTML = 'Parabéns, meta alcançada!';
+        } else if (saldo > meta) {
+            resultado.innerHTML += ` Meta ultrapassada em ${(saldo - meta).toFixed(2)}`;
+        } else {
+            resultado.innerHTML = `Força! Ainda em busca da meta! Faltam apenas R$ ${(meta - saldo).toFixed(2)}`;
+        }
+    }
+</script>

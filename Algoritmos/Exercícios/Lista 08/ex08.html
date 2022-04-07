@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex08</title>
+</head>
+<body>
+    <p>Quantos pães franceses você tem comido por dia?</p>
+    <input id="ipt_pao" type="text">
+    <p>Quantos pacotes de bolacha recheada você tem comido por dia?</p>
+    <input id="ipt_bolacha" type="text">
+    <p>Quantos copos de achocolatado você tem tomado por dia?</p>
+    <input id="ipt_chocolate" type="text"><br><br>
+    <button onclick="verificar()"></button><br><br>
+    <div id="resultado"></div>
+</body>
+</html>
+<script>
+    function verificar() {
+        var pao = Number(ipt_pao.value);
+        var bolacha = Number(ipt_bolacha.value);
+        var chocolate = Number(ipt_chocolate.value);
+        
+        var calorias = pao*50 + bolacha*80 + chocolate*70
+
+        if (calorias >= 0 && calorias < 200) {
+            resultado.innerHTML = 'Parabéns, vai sair em forma da quarentena!';
+        } else if (calorias >= 200 && calorias <= 400) {
+            resultado.innerHTML = 'Cuidado, vai ficar mais "fofinho(a)" após quarentena!';
+        } else if (calorias > 400) {
+            resultado.innerHTML = 'Bom, acho que muitos não vão te reconhecer após a quarentena.';
+        } else {
+            resultado.innerHTML = 'Inserção Inválida. Tente novamente.'
+        }
+    }
+</script>
