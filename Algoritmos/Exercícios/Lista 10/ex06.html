@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex06</title>
+</head>
+<body>
+    <p id="output">Você já clicou <b id="b_quantidade">0</b> vezes</p>
+    <br><br>
+    <button onclick="clicar()">Clique cabalístico</button>
+</body>
+</html>
+<script>
+
+var i = 0;
+
+    function clicar() {
+        i++;
+        b_quantidade.innerHTML = i;
+        if (i == 3 || i == 4 || i == 7 || i == 10) {
+            output.innerHTML = `Você já clicou <b id="b_quantidade">${i}</b> vezes e Juliana gosta desse número!`
+        } else {
+            output.innerHTML = `Você já clicou <b id="b_quantidade">${i}</b> vezes`
+        }
+    }
+</script>
