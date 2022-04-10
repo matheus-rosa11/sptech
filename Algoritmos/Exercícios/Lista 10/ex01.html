@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex01</title>
+</head>
+<body>
+    <h1>Vai comer, Juliane?</h1>
+    <p>Qual fruta chegou na mesa?</p>
+    <input id="ipt_fruta" type="text">
+    <button onclick="descobrir()">Vai comer?</button>
+</body>
+</html>
+<script>
+    function descobrir() {
+        var fruta = ipt_fruta.value;
+
+        if (fruta == 'Uva' || fruta == 'uva'|| fruta == 'Abacaxi' || fruta == 'abacaxi') {
+            alert(`Sim, você vai comer ${fruta}!`)
+        } else {
+            alert(`A fruta ${fruta} ela não come`)
+        }
+    }
+</script>

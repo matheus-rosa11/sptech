@@ -1,13 +1,97 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Classe Social</title>
+    <title>Ex02</title>
+    <style>
+
+        body {
+            margin: 0;
+        }
+
+        .header {
+            border-bottom: 2px solid black;
+        }
+
+        .header h1 {
+            padding-left: 20px;
+        }
+
+        .content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 100px 100px 100px 100px;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .content button {
+            color: green;
+            font-size: 20px;
+            background-color: white;
+            margin-top: 20px;
+            width: 150px;
+            border-style: none;
+            border-bottom: 1px solid black;
+            border-width: 0.2px;
+            transition-property: opacity 100%;
+            transition-duration: 0.2s;
+            border-radius: 4px;
+        }
+
+        .content button:hover {
+            color: white;
+            background-color: green;
+            box-shadow: 1px 1px 4px black;
+            transition-property: opacity 80%;
+            transition-duration: 0.2s;
+
+        }
+
+        .content p {
+            transition: margin-left 4s ease-in-out 1s;
+        }
+
+        input#ipt_renda:invalid::placeholder {
+            color: red;
+        }
+    </style>
 </head>
 <body>
-    <h1>Classe Social</h1>
-    
+    <div class="header">
+        <h1>Classe Social</h1>
+    </div>
+
+
+    <div class="content">
+        <p>Qual a sua renda familiar mensal?</p>
+        <input id="ipt_renda" type="number" placeholder="Insira sua renda">
+        <button onclick="calcular()">Analisar renda</button><br><br>
+        <div id="resultado" class="botao"></div>
+    </div>
 </body>
 </html>
+<script>
+    function calcular() {
+        var renda = ipt_renda.value;
+
+        resultado.innerHTML = '';
+        
+        if (renda <= 250) {
+            resultado.innerHTML = 'Classe E';
+        } else if (renda > 250 & renda <= 900) {
+            resultado.innerHTML = 'Classe D';   
+        } else if (renda > 900 & renda <= 2500) {
+            resultado.innerHTML = 'Classe C';
+        } else if (renda > 2500 & renda <= 9500) {
+            resultado.innerHTML = 'Casse B';
+        } else if (renda > 9500) {
+            resultado.innerHTML = 'Classe A';            
+        } else {
+            resultado.innerHTML = 'Renda inválida. Tente novamente.';
+        }
+    }
+</script>

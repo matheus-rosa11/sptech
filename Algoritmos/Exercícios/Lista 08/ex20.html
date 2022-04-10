@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex20</title>
+</head>
+<body>
+    <select name="" id="ipt_tipo">
+        <option value=1>--Selecionar--</option>
+        <option value=2>Cereais</option>
+        <option value=3>Queijos</option>
+    </select>
+    <select name="" id="ipt_area">
+        <option value=1>--Selecionar--</option>
+        <option value=2>Refrigerada</option>
+        <option value=3>Seca</option>
+    </select>
+    <button onclick="analisar()">Analisar</button><br><br>
+    <div id="resultado"></div>
+</body>
+</html>
+<script>
+    function analisar() {
+        var tipo = ipt_tipo.value;
+        var area = ipt_area.value;
+
+        if (tipo == 2 && area == 2) {
+            resultado.innerHTML = 'Retire o cereal da geladeira';
+        } else if (tipo == 2 && area == 3) {
+            resultado.innerHTML = 'Muito bem, cereal no lugar';
+        } else if (tipo == 3 && area == 2) {
+            resultado.innerHTML = 'Muito bem, queijos no lugar certo';
+        } else if (tipo == 3 && area == 3) {
+            resultado.innerHTML = 'Ponha o queijo na geladeira';
+        }
+    }
+</script>

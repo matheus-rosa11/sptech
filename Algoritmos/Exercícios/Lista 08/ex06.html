@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex06</title>
+</head>
+<body>
+    <p>Qual time grande paulista você torce?</p>
+    <select name="" id="ipt_time">
+        <option value="corinthians">Corinthians</option>
+        <option value="palmeiras">Palmeiras</option>
+        <option value="santos">Santos</option>
+        <option value="saopaulo">São Paulo</option>
+    </select>
+
+    <button onclick="falar()">Fale sobre esse time</button>
+</body>
+</html>
+<script>
+    function falar() {
+        var time = ipt_time.value;
+
+        if (time == 'Corinthians') {
+            resultado.style = 'background-color: black; color: white;';
+            resultado.innerHTML = 'Salve o corinthians';
+        } else if (time == 'Palmeiras') {
+            resultado.style = 'background-color: green; color: white;';
+            resultado.innerHTML = 'Salve o alviverde imponente';
+        } else if (time == 'Santos') {
+            resultado.style = 'background-color: white; color: black;'
+            resultado.innerHTML = 'Agora quem dá a bola é o Santos';
+        } else if (time == 'São Paulo') {
+            resultado.style = 'background-color: black; color: red';
+            resultado.innerHTML = 'Salve o Tricolor paulista';
+        } else {
+            alert('Time inválido! Tente novamente.')
+        }
+    }
+</script>

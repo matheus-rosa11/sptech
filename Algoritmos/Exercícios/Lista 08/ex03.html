@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex03</title>
+</head>
+<body>
+    <h1>Temperatura</h1>
+    <p>Qual a temperatura atual?</p>
+    <input id="ipt_temp" type="text">
+    <button onclick="calcular()">Frio ou calor?</button>
+    <div>
+        <p id="resultado"></p>
+    </div>
+</body>
+</html>
+<script>
+    function calcular() {
+        temp = ipt_temp.value;
+
+        if (temp == null) {
+            resultado.innerHTML = '';
+        } else if (temp <= 0) {
+            resultado.innerHTML = 'Rio Grande do Sul'
+        } else if (temp > 0 & temp <= 14) {
+            resultado.innerHTML = 'Congelante'; 
+        } else if (temp > 14 & temp <= 21) {
+            resultado.innerHTML = 'Com frio';
+        } else if (temp > 21 & temp <= 24) {
+            resultado.innerHTML = 'Confortável';
+        } else if (temp > 24 & temp <= 31) {
+            resultado.innerHTML = 'Com calor'
+        } else if (temp > 31) {
+            resultado.innerHTML = 'Calor escaldante'
+        } else {
+            resultado.innerHTML = 'Temperatura inválida. Tente novamente!'
+        }
+    }
+</script>

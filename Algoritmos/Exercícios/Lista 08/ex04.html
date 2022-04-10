@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex04</title>
+</head>
+<body>
+    <h1>Balança</h1>
+
+    <div>
+        <p>Insira o peso da criança</p>
+        <input id="ipt_peso" type="text">
+        <button onclick="calcular()"></button>
+    </div>
+
+    <div>
+        <p id="resultado"></p>
+    </div>
+</body>
+</html>
+<script>
+    function calcular() {
+        peso = ipt_peso.value;
+        
+        if (peso == null) {
+            resultado.innerHTML = 'Peso inválido. Tente novamente';
+        } else if (peso > 0 & peso <= 13.5) {
+            resultado.innerHTML = 'Abaixo do peso';
+        } else if (peso > 13.5 & peso <= 21.2 && peso != 18.3) {
+            resultado.innerHTML = 'Peso na média';
+        } else if (peso == 18.3) {
+            resultado.innerHTML = 'Peso perfeito';
+        } else if (peso > 21.2) {
+            resultado.innerHTML = 'Acima do peso';
+        }
+    }
+</script>

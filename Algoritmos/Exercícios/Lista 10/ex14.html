@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex14</title>
+</head>
+<body>
+    Qual o tipo de passageiro?
+    <select name="" id="sel_passageiro">
+        <option value="1">Comum</option>
+        <option value="2">Estudante</option>
+        <option value="3">Idoso/PNE</option>
+    </select>
+
+    <select name="" id="sel_passagem">
+        <option value="1">Passagem única</option>
+        <option value="2">Passagem integração</option>
+    </select>
+
+    <button onclick="simular()">Simular preço</button><br><br>
+
+    <div id="resultado"></div>
+</body>
+</html>
+<script>
+    function simular() {
+        var passageiro = Number(sel_passageiro.value);
+        var passagem = Number(sel_passagem.value);
+
+
+        if (passageiro == 3) {
+            
+            passagem = 0;
+
+            resultado.innerHTML = `Valor da passagem: R$ ${passagem}. Você tem direito à gratuidade!`;
+        } else if (passageiro == 1 && passagem == 1) {
+
+            passagem = 4.40;
+
+            resultado.innerHTML = `Valor da passagem escolhida: R$ ${passagem.toFixed(2)}`
+        } else if (passageiro == 1 && passagem == 2) {
+            
+            passagem = 5.90;
+
+            resultado.innerHTML = `Valor da passagem escolhida: R$ ${passagem.toFixed(2)}`;
+        } else if (passageiro = 2 && passagem == 1) {
+
+            passagem = 4.40/2;
+
+            resultado.innerHTML = `Valor da passagem escolhida: R$ ${passagem.toFixed(2)}`;
+        } else if (passageiro = 2 && passagem == 2) {
+            
+            passagem = 5.90/2;
+
+            resultado.innerHTML = `Valor da passagem escolhida: R$ ${passagem.toFixed(2)}`;
+        }
+    }
+</script>

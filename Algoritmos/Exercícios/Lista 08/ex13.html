@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex013</title>
+</head>
+<body>
+    <p>Valor guardado: R$ <span id="resultado"></span></p>
+    <button onclick="guardar()">Guardar R$5,00</button>
+    <button onclick="gastar()">Gastar R$10,00</button>
+</body>
+</html>
+<script>
+
+    var saldo = 0;
+
+    if (saldo >= 0 && saldo < 100) {
+        opt_frase.style = 'color: blue';
+        opt_frase.innerHTML = 'Finanças OK!';
+    } else if (saldo > 100) {
+        opt_frase.style = 'color: black';
+        opt_frase.innerHTML = '#ostentação';
+    } else if (saldo < 0) {
+        opt_frase.style = 'color: red';
+        opt_frase.innerHTML = 'Finanças em perigo';
+    } else if (saldo < -20) {
+        opt_frase.style = 'color: black';
+        opt_frase.innerHTML = 'Quase um Corinthians!';
+    }
+
+    function guardar() {
+        saldo += 5;
+        resultado.innerHTML = `${(saldo).toFixed(2)}`;
+    }
+
+    function gastar() {
+        saldo -= 10;
+        resultado.innerHTML = `${(saldo).toFixed(2)}`;
+    }
+</script>
