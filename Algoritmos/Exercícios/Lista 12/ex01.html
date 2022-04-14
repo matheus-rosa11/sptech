@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 01</title>
+</head>
+<body>
+    <h1>Operações com textos</h1>
+
+    <p>Digite um email:</p>
+    <input type="text" id="ipt_email" onkeyup="analisar()">
+    <div id="mensagem"></div>
+</body>
+</html>
+<script>
+    function analisar() {
+        var email = ipt_email.value;
+        var valido1 = email.indexOf('@');
+        var valido2 = email.endsWith('.com')
+        
+        if (valido1 == -1 || valido2 == false) {
+            mensagem.innerHTML = 'E-mail inválido, insira um e-mail válido para continuar.';
+        } else {
+            mensagem.innerHTML = 'E-mail válido!';
+        }
+    }
+</script>

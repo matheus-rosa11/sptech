@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 03</title>
+</head>
+<body>
+    <p>Qual o seu nome?</p>
+    <input type="text" id="ipt_nome" onkeyup="verificar()">
+    <div id="mensagem"></div>
+</body>
+</html>
+<script>
+    function verificar() {
+        var valido = (ipt_nome.value).trimStart();
+        var nome = valido.trimEnd();
+
+        if (nome.length == 0 || nome.startsWith(' ')) {
+            mensagem.innerHTML = 'Nome deve ser informado.';
+        } else {
+            mensagem.innerHTML = `Nome Ok ${nome}`;
+        }
+    }
+</script>
