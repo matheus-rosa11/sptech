@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Morangos</title>
+</head>
+
+<body>
+    <div id="tela1">
+        <p>Quantas caixas de morangos foram colhidas e serão vendidas?</p>
+        <input id="iptCaixasColhidas" type="text">
+        <button onclick="abrir()">Abrir Vendas</button>
+    </div>
+
+    <div id="tela2" style="display: none;">
+        Quantas caixas foram vendidas?
+        <input id="iptCaixasVendidas" type="text"><br><br>
+        Qual o valor de venda de cada caixa?
+        <input id="iptValorVenda" type="text">
+        <button onclick="registrar()">Registrar venda</button>
+        <button onclick="encerrar()">Encerrar vendas</button>
+        <span id="msgValidar"></span>
+
+        <div id="tela2_2" style="display: none;">
+            <div id="relatorio"></div>
+        </div>
+
+        <div id="resultado" style="display: none;">
+
+        </div>
+
+        <div id="resultadoFinal">
+
+        </div>
+
+        <div id="maiores">
+
+        </div>
+    </div>
+
+</body>
+
+</html>
+<script>
+
+    var caixasColhidas = 0;
+    var caixasVendidas = 0;
+    var validacao = false;
+    var saldoCaixas = 0;
+    var saldoVendas = 0;
+    var totalVendidas = 0;
+    var ultimoVolume = 0;
+    var ultimoValor = 0;
+    var valorVenda = 0;
+
+    function abrir() {
+        caixasColhidas = Number(iptCaixasColhidas.value);
+
+        if (caixasColhidas < 100) {
+            alert('ERRO - Com esse volume de Morangos não dá para abrir as vendas');
+        } else {
+
+            if (caixasColhidas > 2000) {
+                alert('Tudo isso?! Verificar se a quantidade está correta!')
+            }
+
+            tela1.style.display = 'none';
+            tela2.style.display = 'block';
+
+            saldoCaixas = caixasColhidas;
+
+        }
+    }
+
+    function registrar() {
+
+        if (Number(iptCaixasVendidas.value) > caixasVendidas) {
+            ultimoVolume = Number(iptCaixasVendidas.value);
+        }
+
+        if (Number(iptValorVenda.value) > valorVenda) {
+            ultimoValor = Number(iptValorVenda.value);
+        }
+
+        caixasVendidas = parseInt(Number(iptCaixasVendidas.value));
+        valorVenda = Number(iptValorVenda.value);
+        saldoCaixas -= caixasVendidas;
+        totalVendidas += caixasVendidas;
+
+        if (saldoCaixas <= 0) {
+            alert('ERRO, saldo negativo!!')
+        }
+
+        if (caixasVendidas < 20 && saldoCaixas >= 0) {
+
+            if (valorVenda >= 5 && valorVenda <= 6) {
+                validacao = true;
+                msgValidar.innerHTML = 'Valor OK!';
+                saldoVendas += valorVenda;
+            } else {
+                validacao = false;
+                msgValidar.innerHTML = 'Valor errado para esta quantidade de vendas';
+            }
+
+        } else if ((caixasVendidas >= 20 && caixasVendidas <= 40) && saldoCaixas >= 0) {
+
+            if (valorVenda >= 4.5 && valorVenda <= 5.5) {
+                validacao = true;
+                msgValidar.innerHTML = 'Valor OK!';
+                saldoVendas += valorVenda;
+            } else {
+                validacao = false;
+                msgValidar.innerHTML = 'Valor errado para esta quantidade de vendas';
+            }
+
+        } else {
+
+            if ((valorVenda >= 4 && valorVenda <= 5) && saldoCaixas >= 0) {
+                validacao = true;
+                msgValidar.innerHTML = 'Valor OK!';
+                saldoVendas += valorVenda;
+            } else {
+                validacao = false;
+                msgValidar.innerHTML = 'Valor errado para esta quantidade de vendas';
+            }
+        }
+
+        
+
+        if (validacao == true) {
+            tela2_2.style.display = 'block';
+
+            relatorio.innerHTML += `<br>Com a venda de ${totalVendidas} caixas de morango, o saldo restante é de ${saldoCaixas} caixas<br>`;
+        }
+    }
+
+    function encerrar() {
+        relatorio.innerHTML = '';
+        relatorio.style.display = 'none';
+
+        resultado.style.display = 'block';
+
+        var media = saldoVendas / totalVendidas;
+
+        resultado.innerHTML = `<h3>Venda de Morangos</h3>
+        <p>Saldo de produto = ${saldoCaixas}</p>
+        <p>Volume total vendido = ${totalVendidas}</p>
+        <p>Valor total das vendas = ${(totalVendidas * saldoVendas).toFixed(2)}</p>
+        <p>Valor médio das vendas = ${media.toFixed(2)}</p>`;
+
+        if (media >= 5 || (totalVendidas && saldoCaixas < 100)) {
+            resultadoFinal.innerHTML = 'Hoje foi um dia bom!'
+        } else {
+            resultadoFinal.innerHTML = 'Dia normal.'
+        }
+
+        maiores.innerHTML = `<p>O maior volume vendido foi de <b>${ultimoVolume}</b></p>
+        O maior valor de venda foi de <b>R$${ultimoValor}</b>`;
+
+    }
+</script>

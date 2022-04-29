@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 08</title>
+</head>
+<body>
+    <input id="ipt_num" type="number" min="0" max="200">
+    <button onclick="aparecer()">Viva o 7!</button>
+</body>
+</html>
+<script>
+    function aparecer() {
+        var i = 0;
+        var num = Number(ipt_num.value);
+
+        while (i <= num) {
+
+            i++
+            
+            if (i % 7 == 0) {
+                resultado.innerHTML += i + '<br>';
+            }
+        }
+    }
+</script>

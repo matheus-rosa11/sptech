@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 06</title>
+</head>
+<body>
+    <input id="ipt_num" type="number">
+    <button onclick="calcular()">Adoro múltiplos de 5</button>
+    <div id="resultado"></div>
+</body>
+</html>
+<script>
+
+    function calcular() {
+
+        var i = 1;
+        var num = Number(ipt_num.value);
+
+        resultado.innerHTML = '';
+
+        while (i <= num) {
+            if (i%5 == 0) {
+                resultado.innerHTML += i + '<br>';
+            } else {
+                resultado.innerHTML = 'Número inválido. Tente novamente!'
+            }
+            
+            i++;
+        }
+
+
+    }
+</script>
