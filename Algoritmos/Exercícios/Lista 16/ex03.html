@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 03</title>
+</head>
+<body>
+    <h2>Cadastre os bairros onde já</h2>
+    Bairro <input id="ipt_bairro" type="text">
+    <button onclick="cadastrar()">Cadastrar bairro</button><br><br>
+    Local para onde morou <input id="ipt_lembranca" type="text">
+    <button onclick="relembrar()">Relembrar moradia</button>
+</body>
+</html>
+<script>
+
+    var bairros = []
+
+    function cadastrar() {
+
+        var bairro = ipt_bairro.value;
+        bairros.push = capitalizeFirstLetter(bairro);
+
+        ipt_bairro.value = '';
+    }
+
+    function capitalizeFirstLetter(bairro) {
+        return bairro.charAt(0).toUpperCase + (bairro.slice(1)).toLowerCase();
+    }
+
+    function relembrar() {
+        var moradia = Number(ipt_lembranca.value);
+
+        
+
+    }
+</script>

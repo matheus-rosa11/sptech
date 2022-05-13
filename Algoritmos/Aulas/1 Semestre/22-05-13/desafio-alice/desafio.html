@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contar Alunos</title>
+</head>
+<body>
+    <h1>Registro de Alunos</h1>
+
+    Entre com o nome do aluno: <input id="ipt_nome" type="text"><button onclick="cadastrar()">Cadastrar</button><button onclick="mostrar()">Mostrar</button>
+    <div id="resultado"></div>
+</body>
+</html>
+<script>
+
+    var vt_alunos = []
+
+    function cadastrar() {
+
+        var nome = ipt_nome.value;
+
+        console.log(capitalizeFirstLetter(nome)); // Foo
+
+        nome = capitalizeFirstLetter(nome);
+
+        vt_alunos.push(nome);
+
+        ipt_nome.value = '';
+
+    }
+
+    function capitalizeFirstLetter(nome) {
+        return nome.charAt(0).toUpperCase() + (nome.slice(1)).toLowerCase();
+    }
+
+    function mostrar() {
+
+        resultado.innerHTML = '';
+        
+        for (let i = vt_alunos.length - 1; i >= 0; i--) {
+            resultado.innerHTML += `Nome do ${i + 1}º aluno: ${vt_alunos[i]}<br>`;
+        }
+        
+    }
+</script>

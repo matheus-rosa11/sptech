@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 01</title>
+</head>
+
+<body>
+    Destino de Viagem <input id="ipt_destino" type="text">
+    <button onclick="adicionar()">Adicionar</button>
+    <button onclick="primeira()">Primeira viagem</button>
+    <button onclick="terceira()">Terceira viagem</button>
+    <button onclick="ultima()">Última viagem</button><br><br>
+    <div id="resultado"></div>
+</body>
+
+</html>
+<script>
+
+    var viagens = [];
+
+    function adicionar() {
+
+        var nome = ipt_destino.value;
+
+        viagens.push(capitalizeFirstLetter(nome));
+
+        ipt_destino.value = '';
+
+    }
+
+    function capitalizeFirstLetter(nome) {
+        return nome.charAt(0).toUpperCase() + (nome.slice(1)).toLowerCase();
+    }
+
+    function primeira() {
+
+        resultado.innerHTML = '';
+
+        if (viagens.length <= 0) {
+            resultado.innerHTML = 'Ainda não viajou. Tente registrar uma viagem!';
+
+        } else if (viagens[0] == undefined || viagens[0] == '') {
+            resultado.innerHTML = 'Ainda não viajou. Tente registrar uma viagem!';
+
+        } else {
+            resultado.innerHTML = `Primeira viagem: ${viagens[0]}`;
+
+        }
+
+    }
+
+    function terceira() {
+
+        resultado.innerHTML = '';
+
+        if (viagens.lenth <= 0) {
+            resultado.innerHTML = 'Ainda não fez a 3ª viagem. Viaje mais vezes!';
+
+        } else if (viagens[2] == undefined || viagens[2] == '') {
+            resultado.innerHTML = 'Ainda não fez a 3ª viagem. Viaje mais vezes!';
+
+        } else {
+            resultado.innerHTML = `Terceira viagem: ${viagens[2]}`;
+
+        }
+
+    }
+
+    function ultima() {
+        
+        resultado.innerHTML = '';
+
+        if (viagens.length <= 0) {
+            resultado.innerHTML = 'Ainda não viajou. Tente registrar uma viagem!';
+
+        } else if (viagens[0] == undefined || viagens[0] == '') {
+            resultado.innerHTML = 'Ainda não viajou. Tente registrar uma viagem!';
+
+        } else {
+            resultado.innerHTML = `Última viagem: ${viagens[viagens.length - 1]}`;
+
+        }
+        
+    }
+</script>
