@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio!</title>
+</head>
+
+<body>
+    <i>Indique o resultado</i>
+    <select name="combo_time" id="ipt_time">
+        <option value=0>--Selecione uma opção--</option>
+        <option value="vitoria">Vitória</option>
+        <option value="empate">Empate</option>
+        <option value="derrota">Derrota</option>
+    </select>
+
+    <button onclick="registrar()">Registrar jogo</button>
+
+    <div id="resultado"></div>
+</body>
+
+</html>
+<script>
+
+    var registros = []
+    var vitorias = 0;
+    var empates = 0;
+    var derrotas = 0;
+    var pontos = 0;
+
+    function registrar() {
+
+        if (ipt_time.value == 0) {
+            alert('Selecione uma opção válida!')
+        } else {
+            var opcao = ipt_time.value;
+            registros.push(opcao);
+
+            if (opcao == 'vitoria') {
+                vitorias++;
+                pontos += 3
+            } else if (opcao == 'empate') {
+                empates++;
+                pontos++;
+            } else {
+                derrotas++;
+            }
+
+            resultado.innerHTML = `
+            O time teve ${vitorias} vitórias, ${empates} empates e ${derrotas} derrotas<br><br>
+            Pontuação total: ${pontos} pontos<br><br>
+            Aproveitamento: ${((pontos /( registros.length * 3)) * 100).toFixed(2)}%`;
+
+
+        }
+
+    }
+</script>
