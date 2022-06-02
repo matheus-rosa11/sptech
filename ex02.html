@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 02</title>
+</head>
+<body>
+    Qual o saldo da conta? <input type="text" id="ipt_saldo">
+    Qual o valor do débíto? <input type="text" id="ipt_debito">
+    <button onclick="analisar()">Analisar conta</button>
+    <div id="msg"></div>
+</body>
+</html>
+<script>
+    function analisar() {
+        var saldo = Number(ipt_saldo.value);
+        
+        saldo -= Number(ipt_debito.value);
+
+        saldo < 0 ? msg.innerHTML = `<b style="color: red;">O saldo atual da conta corrente é ${saldo.toFixed(2)}</b>` : msg.innerHTML = `<i style="color: blue;">O saldo atual da conta corrente é ${saldo.toFixed(2)}</i>`
+    }
+</script>
