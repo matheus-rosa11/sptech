@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 05</title>
+</head>
+<body>
+    <select name="" id="ipt_decisao">
+        <option value='0'>-- Selecione uma opção --</option>
+        <option value="pedra">Pedra</option>
+        <option value="papel">Papel</option>
+        <option value="tesoura">Tesoura</option>
+    </select>
+
+    <button onclick="jogar()">Jogar!</button><br><br>
+    <img style="height: 150px;" src="" alt="" id="result_player">
+    <img style="height: 150px;" src="" alt="" id="result_pc">
+    <div id="resultado"></div>
+</body>
+</html>
+<script>
+    function jogar() {
+
+        var random = Math.random() * 2 + 1;
+        var player = ipt_decisao.value;
+        
+        if (player != '0') {
+
+            result_player.src = `assets/${player}.png`;
+
+            if (random < 1.5) {
+                result_pc.src = 'assets/pedra.png';
+            } else if (random >= 1.5 && random < 2.5) {
+                result_pc.src = 'assets/tesoura.png';
+            } else {
+                result_pc.src = 'assets/papel.png';
+            }
+
+            if (player == random) {
+                resultado.innerHTML = 'EMPATE!';
+            } else {
+
+                if (player == 'pedra') {
+
+                    if (random == 'tesoura') {
+                        resultado.innerHTML = 'VOCÊ GANHOU!';
+                    } else {
+                        resultado.innerHTML = 'Você perdeu :( Tente novamente!';
+                    }
+
+                } else if (player == 'papel') {
+                    
+                    if (random == 'pedra') {
+                        resultado.innerHTML = 'VOCÊ GANHOU!';
+                    } else {
+                        resultado.innerHTML = 'Você perdeu :( Tente novamente!';
+                    }
+
+                } else {
+                    
+                    if (random == 'papel') {
+                        resultado.innerHTML = 'VOCÊ GANHOU!'
+                    } else {
+                        resultado.innerHTML = 'Você perdeu :( Tente novamente!'
+                    }
+                }
+            }
+
+        } else {
+            alert('Escolha uma opção válida!');
+        }
+    }
+</script>

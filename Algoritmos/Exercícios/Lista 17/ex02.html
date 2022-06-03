@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 02</title>
+</head>
+<body>
+    <button onclick="sortear()">Sortear time</button><br><br>
+    <img style="height: 150px;" src="" alt="" id="resultado">
+</body>
+</html>
+
+<script>
+    function sortear() {
+        var random = Math.random();
+
+        if (random < 0.25) {
+            resultado.src = 'assets/saopaulo.png';
+        } else if (random >= 0.25 && random <= 0.50) {
+            resultado.src = 'assets/santos.png';
+        } else if (random > 0.50 && random <= 0.75) {
+            resultado.src = 'assets/palmeiras.png';
+        } else {
+            resultado.src = 'assets/corinthians.png';
+        }
+    }
+</script>

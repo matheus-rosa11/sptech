@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 01</title>
+</head>
+<body>
+    <button onclick="sortear()">Sortear</button>
+    <div id="resultado"></div>
+</body>
+</html>
+<script>
+    function sortear() {
+        var numero = Math.random();
+
+        if (numero > 0.5) {
+            resultado.innerHTML = 'Eu arredondaria para 1.';
+        } else {
+            resultado.innerHTML = 'Eu arredondaria para 0.';
+        }
+
+        resultado.innerHTML += ` Número sorteado: ${numero.toFixed(2)}`;
+    }
+</script>
