@@ -1,0 +1,2 @@
+Quando voce habilita virtualização no windows, você permite o windows trabalhar com o sistema de SLAT e MLAT (
+que fazem referência não ao dado em si, mas a posição dele dentre os hardwares)

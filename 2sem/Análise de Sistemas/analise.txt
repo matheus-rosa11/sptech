@@ -1,0 +1,32 @@
+os dados não são do seu sistema, são da corporação.
+Vários sistemas usam os mesmos dados
+Não é interessante redundar os dados, mas sim prover o compartilhamento e unicidade de dados (principalmente em cadastros)
+Quando tem 2 cadastros iguais, se você atualizar um, o outro fica desatualizado e teria que atualizar manualmente.
+se um produto não possui compartilhamento de dados, promove a redundância dos mesmos.
+
+definição de entidade:
+algo do mundo real que pode ser definido, contém atributos e é relevante para o negócio que está sendo modelado.
+
+uma instância é um conjunto de atributos de um mesmo elemento de uma Entidade
+
+uma entidade só passa a ser uma tabela depois de ser criada.
+
+passos:
+
+1. IDENFICIAÇÃO DAS ENTIDADES, normalmente substantivos
+
+2. IDENTIFICAR QUEM ESTÁ RELACIONADO COM QUEM
+
+3. IDENTIFICAR OS PRINCIPAIS ATRIBUTOS/CAMPOS E SEUS TIPOS
+
+4. IDENTIFICAR AS CHAVES PRIMÁRIAS.
+
+5.  IDENTIFICAR AS FKS
+
+6. IDENTIFICAR CARDINALIDADES
+
+7. IDENTIFICAR ASSOCIATIVAS
+
+8. IDENTIFIQUE AS TABLEAS QUE GUARDAM TRANSAÇÕES, HISTÓRICOS OU LOGS
+
+9. IDENTIFIQUE AS TABELAS DE AUXILIARES

@@ -1,0 +1,13 @@
+- Documentação
+- MER
+
+Nome do grupo: Magna Security
+Tema: Monitoramento de servidores de instituições de ensino.
+
+Monitorar servidores de instituições de ensino, verificar se, com base em alto número de requisições no servidor, é necessário subir um servidor 
+
+criar status ativo/inativo
+
+empresa
+gerente 
+ag. suporte

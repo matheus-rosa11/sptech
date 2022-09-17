@@ -1,0 +1,68 @@
+anotacoes SO 24/08
+
+o sistema operacional pode ter acessos e funções mudadas perante as mudanças tecnológicas.
+o firewall da rede tem priorização de threads/processos. Por exemplo, na faculdade, a maior prioridade é acessar o moodle do que fazer download.
+
+
+bootstrap loader busca o SO do armazenamento físico (microsd, hd, ssd...)
+
+SO contem gerenciamento de recursos (hardware | software)
+
+fileira de threads organizada pelo SO, e ele utiliza o máximo de ciclos possíveis do processador.
+se eu tenho 3.9Ghz, eu tenho 3,9 Giga ciclos por segundo/minuto.
+por isso é ruim seu pc ficar em idle time.
+
+gerencia de memoria e armazenamento
+
+preciso ao mesmo tempo monitorar os 2, porque a ram contem paig-nação de memoria/swap. ou seja, se a ram morrer (se usar mt processo, auemntando a qtd de ram), vou precisar da extensao dessa memoria, que o SO vai prover a partir do seu arm. de disco, fazendo com que eu consiga extender a memoria ram
+Existe uma qtd de memoria de massa dedicada a memoria swap
+porem, com isso, eu informo p/ sistema operacional q eu nao posso gravar informação sobre aquilo que eu estou executando.
+nao é normal ser utilizada a paginação de memoria/swap.
+O disco físico não é volátil. Eu não perco a memoria quando desligo o pc.
+Porém, quando eu utilizo swap, essa memoria precisa ser volátil, estando dentro de um disco que não é volátil.
+^^memória virtual
+
+file system/ gerenciamento de arquivos - faz com que toda extensão da sua memoria fisica nao volatil seja de uma extensao unica, tenha uma formatação única.
+RAID: inexpensive disks. Redundant Array of Independent Disks. - guardar os dados do servidor num array 
+
+FAT: File Alocation Table - universal - mais lento
+Tabela de alocação de arquivos.
+
+NTFS: Só windows
+
+O bootstrap loader vai chamar os quadradinhos, onde está guardado o sistema operacional
+
+em relação a formatação dos HDs, cada bloquinho de memória indica onde fica o próximo bloco correspondente
+o que gera menor velocidade, apesar de ganhar espaço de armazenamento.
+
+então foi criada o FAT, onde fica em um bloquinho um arquivo com todas as posições, gerando maior velocidade de leitura.
+também contém a MFT - Master File Table
+
+hoje, usamos a FAT32.
+
+na FAT16, cada quadradinho continha 32Kb - o que gerava superutilização de memória
+na FAT32, temos blocos menores (4Kb) para maior precisão das informações
+
+NTFS - criptografia, velocidade de escrita, logging
+
+a MESMA HISTÓRIA do DIGITAL pro ANALÓGICO. Quanto menor, maior a precisão.
+Ou seja, o cluster de 32Kb ocupa mais espaço e faz voce perder mais memória.
+
+o FAT32 é bem mais lento, porém ele ganha em ser genérico, funciona em tudo.
+
+Pesquisar Ext4
+
+quando voce faz uma virtualização de diversas aplicações, voce tem uma máquina com vários SOs que, teoricamente, não se conversam. São avulsos
+
+PC: Hardware > SO > Software > HYPERVISOR > Máquina virtual( SO > Software )
+
+Paravirtualização - as threads de conexão faziam o caminho reverso, até chegar no hardware e voltava até a aplicação da virtualização.
+
+VM não tem paginaçao de memória.
+
+o lugar que selecionamos na azure/aws é um parque de máquinas, por isso aparecem várias, que são virtualizações de máquina.
+
+O Dual Boot canabaliza o HD, pois sua memoria possui 2 MFT, que deveria ser um disco único. (inclusive, dois gerenciamentos de memória no mesmo disco - FAT | NTFS)
+
+Se você faz virtualização na sua máquina, são 2 sistemas completamente a parte.
+Com o WSL, você faz uma conteinerização com um SO Linux.
