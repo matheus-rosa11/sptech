@@ -1,0 +1,2 @@
+os registradores não armazenam as threads, mas sim dados de hardware como endereçamento de memória
+

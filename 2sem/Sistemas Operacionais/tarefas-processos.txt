@@ -1,0 +1,17 @@
+tarefa e processo é a mesma coisa.
+
+Monotarefa é interessante porque tem 100% de aproveitamento.
+
+Running = processo rodando.
+Ready = quando chegar a vez dele na fila, ele vai ser processado.
+Porém, eu posso dar um sleep nesse processo pra ele sair da fila, e ele não vai ser executado, mas tb não vai morrer
+Sleeping 
+
+slide 19 muito forte
+
+jobs = comando fortíssimo
+
+ps = exibe INFORMAÇÕES dos processos ativos
+ps -a = mostra varios conteiners rodando
+
+p/ fazer rdp, é necessário permitir via ssh, não basta liberar a porta

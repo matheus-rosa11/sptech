@@ -1,0 +1,63 @@
+EC2 - Elastic Cloud Computing
+
+É elástica porque pode ser aumentada ou diminuída como você quiser
+
+
+Instância é a máquina que você subiu. A sua VM é uma instância.
+
+AMI = Imagem de máquina de Amazon.
+A conta da WSA limita o nº de instâncias.
+Nosso plano: 5
+
+Há soluções sem gratuidade que são instâncias com EBS - Elastic Block Store
+
+GERENCIAMENTO DE CUSTO DE NUVEM
+Mesmo que voce crie as coisas e use bastante, você gasta de 25 a 30 dolares no semestre.
+
+
+PASSOS
+
+1. Identificar a máquina
+2. Selecionar a imagem do SO
+RedHat - mais utilizado em virtualização no mundo (Suporte IBM)
+Fedore - Versão workstation do RedHat (Baseado em Arch)
+
+3. Selecionar a instância (Tipo de instância)
+x vCPU, y GiB RAM
+
+4. Criar par de chaves (dar nome e selecionar o tipo de criptografia)
+Tipo ED25519 não é suportado por windows.
+
+Public key - Criptografia RSA (Difícil de quebrar)
+Private key - Chave de descriptografia
+
+o PuTTY pode ser criado com base em uma .pem
+
+5. Guardar chave privada.
+
+Após, na aula, acessaremos com um protocolo via RDP (Remote Desktop)
+-- MEXER NO MENU DE REDE
+É necessário mexer na configuração da rede para setar RDP
+
+o DNS Público é como você a sua instância pública
+
+==========
+
+mesmo que eu pare a instância, o disco ainda fica disponível e consumindo
+para isso, podemos
+ATTACHAR e DESATTACHAR disco.
+ASSOCIAR e DESASSOCIAR
+
+que no caso, são Volumes
+
+tabela verdade de attachment
+
+instância | volume
+
+0 | 0 = 1
+0 | 1 = 1
+1 | 0 = 0
+1 | 1 = 1
+
+O volume precisa estar attachado no root, geralmente (dev/sda1).
+

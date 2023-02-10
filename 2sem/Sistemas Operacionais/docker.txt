@@ -1,0 +1,1 @@
+docker ps -a = lista todos os containers que estão rodando

@@ -1,0 +1,7 @@
+VM = Sistema operacional completo.
+
+Container = Encapsulamento em cima de uma aplicação única. Não sobe o SO inteiro. Por exemplo: o Node.JS.
+- Não é um ambiente virtual.
+
+WSL = *Aplicação* de um SO Linux (Container um pouco mais pesado).
+

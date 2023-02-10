@@ -1,0 +1,33 @@
+Associação
+- Exemplo: classe Funcionario - classe Empresa
+Composição e Agregação
+- Um objeto é parte de outro objeto
+- Exemplo: botão é um oibjeto que faz parte do objeto Tela da classe JFrame
+Herança
+- Cria-se uma classe herdeira.
+
+
+Cardinalidade ~= Multiplicidade (Diagrama de Classes)
+
+COMPOSIÇÃO E AGREGAÇÃO
+Composição - quando o objeto PARTE só existe se o objeto TODO existe.
+é composição ou agregação?
+primeiro deve-se ver qual classe contém qual.
+- a classe TODO contém ItemPedido, ela QUEM POSSUI a parte.
+- verificar - se a PARTE existe se e somente se o TODO existir (por exemplo, não tem como eu criar o ItemPedido sem criar o PedidoAntes).
+
+PARTE: é o que está contido na classe TODO.
+
+quando o relacionamento é forte, é agregação
+quando a parte depende do todo, temos composição.
+
+a parte compõe o todo (composição)
+
+dica: "TEM UM"
+Pedido TEM UM ItemPedido
+Equipe TEM UM Jogador
+
+LOSANGO SEMPRE ao lado da classe TODO
+COMPOSIÇÃO - Losango escuro
+AGREGAÇÃO - Losango claro
+

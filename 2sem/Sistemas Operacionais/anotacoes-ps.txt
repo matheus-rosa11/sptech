@@ -1,0 +1,35 @@
+ps -aux:
+é um relatório dos processos do exato momento que é chamado
+
+ps - te da o status desses containers, não tem como pelo top
+
+você precisa de um id para poder inicializar/parar, assim como será necessário nos containers de java, mysql, etc
+
+PID = id do processo
+*NÃO TEM SHARED MEMORY
+
+RSS = resident set size
+*é importante saber pq é a memoria q seu programa está consumindo
+
+VSZ = virtual memory size
+===========================================================================================================
+
+Stat= status daquele processo (Ss, S, I<...)
+
+as filas são armazenadas nos registradores, que vão alimentando o processador
+
+posso ter o ESTADO DE PROCESSO 
+D Uninterruptible (IO)
+
+R Running (on run queue)
+etc.
+* Verificar pdf moodle
+
+uma sessão de shell é livre, podem existir várias independentes
+
+===========================================================================================================
+ADDR = Endereço de memoria
+C ou CP = agendamento (inicializar com o owindows, por exp.) - da p tirar processos que causam males ao seu hardware quando voce inicia
+PPID = id do processo pai
+
+niceness = valor artifical somado à prioridade

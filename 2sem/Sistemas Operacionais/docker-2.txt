@@ -1,0 +1,10 @@
+docker file
+
+script vai subir o dockerfile
+
+sem extensão
+
+docker build -t dockerfile .
+
+^^ quando eu buildo com isso, eu subo as configs do dockerfile de forma temporária
+

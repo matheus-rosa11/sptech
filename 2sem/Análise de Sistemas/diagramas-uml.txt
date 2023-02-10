@@ -1,0 +1,39 @@
+2 grupos UML (uml é toda aquela árvore com TODOS os tipos de diagramas).
+
+estruturais e comportamentais.
+
+estruturais = como será construido o meu sistema.
+
+comportamentais = como meu sistema vai funcionar de acordo com as interações com os usuários.
+
+Existe uma interação muito forte entre os diagramas.
+
+Não é porque um está do lado estrutural e outro diagrama está do lado comportamental que eles não se relacionam.
+
+Os diagramas estruturais não necessariamente vem antes dos comportamentais no quesito cronológico.
+
+================================================
+
+DIAGRAMA DE CASOS DE USO (remetem aos meus comportamentos, como interagem meus usuários com esse sistema propriamente dito)
+--------------------------------------
+
+- Os atores não são as pessoas, são os papéis que eles exercem;
+
+- Não mostra detalhes dos casos;
+
+- Nâo deve mostrar botões, telas nem nada relacionado ao sistema;
+**boxel rebound
+================================================
+Linha cheia = Associar ATOR ao CASO DE USO.
+Linha tracejada = EXTENSÃO ou INCLUSÃO.
+
+EXTENSÃO: TEM CONDIÇÃO  -- Associação entre 2 casos de uso que depende de uma condição.
+
+INCLUSÃO: NÃO TEM CONDIÇÃO -- Associação entre 2 casos de uso que SEMPRE é necesssária.
+
+por enquanto, não utilizaremos a seta, apenas linha tracejada.
+
+AMBAS só ocorrem ENTRE casos de uso.
+
+o caso extendido APONTA PARA o caso de uso.
+
